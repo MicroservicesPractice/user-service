@@ -7,9 +7,9 @@ import (
 
 	log "github.com/sirupsen/logrus"
 
-	"registration-service/app/api"
-	"registration-service/app/config/initializers"
-	"registration-service/app/helpers"
+	"user-service/app/api"
+	"user-service/app/config/initializers"
+	"user-service/app/helpers"
 )
 
 var SERVER_PORT = helpers.GetEnv("SERVER_PORT")

@@ -5,7 +5,7 @@ import (
 
 	"github.com/gin-gonic/gin"
 
-	"registration-service/app/api/registration"
+	"user-service/app/api/registration"
 )
 
 func Controllers(r *gin.Engine, db *sql.DB) {

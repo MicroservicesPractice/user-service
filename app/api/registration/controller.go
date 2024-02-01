@@ -6,9 +6,9 @@ import (
 
 	"github.com/gin-gonic/gin"
 
-	"registration-service/app/consts"
-	"registration-service/app/helpers"
-	"registration-service/app/helpers/log"
+	"user-service/app/consts"
+	"user-service/app/helpers"
+	"user-service/app/helpers/log"
 )
 
 func SignUp(c *gin.Context) {

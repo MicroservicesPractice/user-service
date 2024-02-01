@@ -6,7 +6,7 @@ import (
 
 	log "github.com/sirupsen/logrus"
 
-	"registration-service/app/helpers"
+	"user-service/app/helpers"
 )
 
 func InitLogger() {
