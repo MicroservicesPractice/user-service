@@ -26,3 +26,20 @@ migrateup: # migrate postgresql up
 .PHONY: migrate postgresql down
 migratedown: # migrate postgresql down
 	migrate -path ./db/migrations -database "postgresql://$(DB_USER):$(DB_PASSWORD)@$(DB_HOST):$(DB_PORT)/$(DB_NAME)?sslmode=disable" down
+
+.PHONY: prototGen
+protoGen: # migrate postgresql down
+	protoc --go_out=./app ./proto/invoicer.proto
+
+.PHONY: prototGen2
+prototGen2: # migrate postgresql down
+	protoc --go_out=./app --go_opt=paths=source_relative \
+    --go-grpc_out=./app --go-grpc_opt=paths=source_relative \
+    ./proto/invoicer.proto
+
+.PHONY: goModule
+goModule: # change GO111MODULE env 
+	go env -w GO111MODULE=on
+
+
+
