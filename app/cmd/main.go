@@ -29,6 +29,8 @@ type myGRPCServer struct {
 
 func (m *myGRPCServer) Create(ctx context.Context, request *proto.CreateRequest) (*proto.CreateResponse, error) {
 	log.Println("Create called")
+	log.Println("Create called")
+	log.Println("Create called")
 	return &proto.CreateResponse{Pdf: []byte("TODO")}, nil
 }
 
