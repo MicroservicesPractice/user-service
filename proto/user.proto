@@ -1,17 +1,29 @@
 syntax = "proto3";
 
-package proto;
+package user;
 
-option go_package = "/proto";
+option go_package = "/user";
 
-service Reverse {
-    rpc Do(UserRequest) returns (UserResponse) {}
+service User {
+    rpc CreateUser(CreateUserRequest) returns (CreateUserResponse) {}
+    rpc GetUserPassword(GetUserPasswordRequest) returns (GetUserPasswordResponse) {}
 }
 
-message UserRequest {
+message CreateUserRequest {
+    string email = 1;
+    string password = 2;
+    string nickname = 3;
+    string phone_number = 4;
+}
+
+message CreateUserResponse {
     string message = 1;
 }
 
-message UserResponse {
-    string message = 1;
+message GetUserPasswordRequest {
+    string id = 1;
+}
+
+message GetUserPasswordResponse {
+    string password = 1;
 }

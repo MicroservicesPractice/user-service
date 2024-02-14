@@ -1,4 +1,4 @@
-package api
+package httpApi
 
 import (
 	"database/sql"
