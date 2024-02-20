@@ -54,8 +54,6 @@ func startHTTPServer() {
 
 	router := gin.Default()
 
-	log.Infof("FUUUUUUCK")
-
 	httpApi.Controllers(router, dataBase)
 
 	err := router.Run(fmt.Sprintf(":%v", SERVER_PORT))
