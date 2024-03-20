@@ -8,10 +8,12 @@ import (
 	log "github.com/sirupsen/logrus"
 	"google.golang.org/grpc"
 
-	grpcApi "user-service/app/api/grpc/user"
+	userServiceGrpc "user-service/app/api/grpc/user"
 	httpApi "user-service/app/api/http"
 	"user-service/app/config/initializers"
 	"user-service/app/helpers"
+
+	grpcApi "github.com/MicroservicesPractice/grpc-api/generated/user"
 )
 
 var SERVER_PORT = helpers.GetEnv("SERVER_PORT")
@@ -34,7 +36,7 @@ func startGRPCServer() {
 		log.Fatalf("failed to listen: %v", err)
 	}
 	grpcServer := grpc.NewServer()
-	userServer := &grpcApi.UserGRPCServer{}
+	userServer := &userServiceGrpc.UserGRPCServer{}
 	grpcApi.RegisterUserServer(grpcServer, userServer)
 
 	log.Printf("server listening at %v", lis.Addr())
