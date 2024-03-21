@@ -1,0 +1,30 @@
+syntax = "proto3";
+
+package user;
+
+option go_package = "/user";
+
+service User {
+    rpc CreateUser(CreateUserRequest) returns (CreateUserResponse) {}
+    rpc GetUserPassword(GetUserPasswordRequest) returns (GetUserPasswordResponse) {}
+}
+
+message CreateUserRequest {
+    string email = 1;
+    string password = 2;
+    string nickname = 3;
+    string phone_number = 4;
+}
+
+message CreateUserResponse {
+    string message = 1;
+}
+
+message GetUserPasswordRequest {
+    string email = 1;
+}
+
+message GetUserPasswordResponse {
+    string id = 1;
+    string password = 2;
+}
