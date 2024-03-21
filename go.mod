@@ -3,6 +3,7 @@ module user-service
 go 1.21.3
 
 require (
+	github.com/MicroservicesPractice/grpc-api v0.1.0
 	github.com/gin-gonic/gin v1.9.1
 	github.com/go-playground/validator/v10 v10.16.0
 	github.com/joho/godotenv v1.5.1
@@ -11,7 +12,6 @@ require (
 	github.com/ttacon/libphonenumber v1.2.1
 	golang.org/x/crypto v0.18.0
 	google.golang.org/grpc v1.61.0
-	google.golang.org/protobuf v1.32.0
 )
 
 require (
@@ -39,5 +39,6 @@ require (
 	golang.org/x/sys v0.16.0 // indirect
 	golang.org/x/text v0.14.0 // indirect
 	google.golang.org/genproto/googleapis/rpc v0.0.0-20240125205218-1f4bbc51befe // indirect
+	google.golang.org/protobuf v1.32.0 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
