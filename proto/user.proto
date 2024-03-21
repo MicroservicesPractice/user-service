@@ -21,9 +21,10 @@ message CreateUserResponse {
 }
 
 message GetUserPasswordRequest {
-    string id = 1;
+    string email = 1;
 }
 
 message GetUserPasswordResponse {
-    string password = 1;
+    string id = 1;
+    string password = 2;
 }
