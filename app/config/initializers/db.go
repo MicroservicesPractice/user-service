@@ -18,8 +18,6 @@ var DB_NAME = helpers.GetEnv("DB_NAME")
 var DB_USER = helpers.GetEnv("DB_USER")
 var DB_PASSWORD = helpers.GetEnv("DB_PASSWORD")
 
-var DB *sql.DB
-
 func ConnectDb() *sql.DB {
 	runMigrations()
 
@@ -38,8 +36,6 @@ func ConnectDb() *sql.DB {
 	}
 
 	log.Info("DB was successfully connected!")
-
-	DB = db
 
 	return db
 }
